@@ -1,0 +1,328 @@
+@import url(reset.css);
+@import url(variables.css);
+@import url(animation.css);
+
+/*CARREGAMENTO*/
+.pre-carregamento{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--NeonGreen);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    z-index: 1000;
+}
+
+.pre-carregamento .spine{
+    width: 60px;
+    height: 60px;
+    border-radius: 10%;
+    background-color: var(--DarkBlue);
+    animation: carregar .9s linear infinite;
+}
+
+.spine:nth-child(2){
+    animation-delay: .2s;
+}
+
+.spine:nth-child(3){
+    animation-delay: .3s;
+}
+.spine:nth-child(4){
+    animation-delay: .4s;
+}
+
+.spine:nth-child(1){
+    animation-delay: .1s;
+}
+
+/*HOME*/
+.content{
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.content h1{
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.content p{
+    text-align: center;
+    font-size: 1em;
+    font-weight: normal;
+    max-width: 600px;
+    width: 100%;
+}
+.content .menu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.header input{
+    min-width: 30%;
+    height: 35px;
+    border-radius: 5px;
+    border: transparent;
+    outline: transparent;
+    padding-left: 35px;
+    font-size: 1em;
+    background-color: var(--DarkGrayish-Blue);
+    color: var(--LightCyan);
+}
+
+.header input::placeholder{
+    color: var(--LightCyan);
+}
+
+.header input:focus{
+    box-shadow: 0px 0px 14px 10px var(--NeonGreen);
+}
+
+.header button{
+    min-width: 10%;
+    height: 35px;
+    border-radius: 5px;
+    border: transparent;
+    font-size: 1em;
+    background-color: var(--NeonGreen);
+    cursor: pointer;
+    color: var(--DarkGrayish-Blue);
+}
+
+.menu a{
+    color: var(--NeonGreen);
+    font-size: 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/*PERSONAGENS*/
+
+.header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header h2{
+    color: var(--LightCyan);
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.header .menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.header a ion-icon{
+    font-size: 1.6em;
+    background-color: none;
+    cursor: pointer;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding-bottom: 50px;
+    opacity: 1;
+    transition: 5s;
+}
+
+.box{
+    min-width: 50%;
+    padding: 30px;
+    background-color: var(--DarkGrayish-Blue);
+    border-radius: 5px;
+    color:var(--LightCyan);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2em;
+
+    transition: all .5s;
+}
+
+.box img{
+    border-radius: 5px;
+    transition: all .5s;
+    box-shadow: 0px 0px 0px 5px var(--NeonGreen);
+}
+.box img:hover{
+    transform: scale(1.1);
+    box-shadow: none;
+}
+
+.box .single{
+    display: flex;
+    flex-direction: column;
+}
+
+.box h2{
+    font-size: 2em;
+    font-weight:bold;
+    max-width: 100%;
+    width: 250px;
+    color: var(--NeonGreen);
+}
+
+.box .single h3{
+    font-size: 1.1em;
+    font-weight: 700;
+    display: flex;
+    /*align-items: center;
+    justify-content: center;*/
+    gap: 0.5em;
+}
+
+h3 > span{
+    font-weight: normal;
+    max-width: 100%;
+    width: 200px;
+}
+
+
+.caixa{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.caixa .box{
+    max-width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.caixa .box h2{
+    width: 100%;
+}
+
+.mais{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.mais button{
+    min-width: 10%;
+    height: 35px;
+    border-radius: 5px;
+    border: transparent;
+    font-size: 1em;
+    background-color: var(--NeonGreen);
+    cursor: pointer;
+    color: var(--DarkGrayish-Blue);
+}
+
+button.desactive{
+    display: none;
+}
+
+@media screen and (max-width: 700px){
+    .header{
+        padding: 40px 0;
+        height: auto;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .header input{
+        min-width: 80%;
+    }
+
+    .header button{
+        min-width: 40%;
+    }
+
+    .mais button{
+        min-width: 40%;
+    }
+}
+
+@media screen and (max-width: 550px){
+
+    .content p{
+        max-width: 100%;
+        font-size: 0.9em;
+        width: 350px;
+    }
+
+    .box{
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .box img{
+        width: 90%;
+    }
+
+    .box h2{
+        width: 100%;
+        text-align: center;
+    }
+
+    .single{
+        gap: 1em;
+    }
+
+    .box .single h3{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .caixa .box{
+        min-width: 80%;
+        text-align: center;
+    }
+
+    .caixa .box h3 {
+        width: 100%;
+        text-align: center;
+    }
+}

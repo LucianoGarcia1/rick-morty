@@ -1,0 +1,15 @@
+:root{
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --DarkGrayish-Blue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+}
+
+.light{
+    --LightCyan: hsl(218, 23%, 16%);
+    --NeonGreen: hsl(217, 19%, 24%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --DarkGrayish-Blue: hsl(193, 38%, 86%);
+    --DarkBlue: hsl(150, 100%, 66%);
+}
